@@ -2,36 +2,26 @@ package com.zula.database.entity;
 
 import com.zula.database.core.BaseEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Lob;
-import javax.persistence.Table;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "message_outbox")
+/**
+ * POJO representation of the message_outbox table for use with JDBI.
+ * JPA annotations removed — mapping is handled by JDBI mappers (e.g. RegisterBeanMapper).
+ */
 public class MessageOutbox extends BaseEntity {
 
-    @Column(name = "message_id", nullable = false, unique = true)
     private String messageId;
 
-    @Column(name = "message_type", nullable = false)
     private String messageType;
 
-    @Column(name = "target_service", nullable = false)
     private String targetService;
 
-    @Lob
-    @Column(name = "payload", nullable = false)
     private String payload;
 
-    @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "sent_at")
     private LocalDateTime sentAt;
 
-    @Column(name = "retry_count")
     private Integer retryCount = 0;
 
     public String getMessageId() { return messageId; }

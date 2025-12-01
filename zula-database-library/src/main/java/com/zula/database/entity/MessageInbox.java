@@ -2,33 +2,24 @@ package com.zula.database.entity;
 
 import com.zula.database.core.BaseEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Lob;
-import javax.persistence.Table;
 import java.time.LocalDateTime;
 
-@Entity
-@Table(name = "message_inbox")
+/**
+ * POJO representation of the message_inbox table for use with JDBI.
+ * JPA annotations removed — mapping is handled by JDBI mappers (e.g. RegisterBeanMapper).
+ */
 public class MessageInbox extends BaseEntity {
 
-    @Column(name = "message_id", nullable = false, unique = true)
     private String messageId;
 
-    @Column(name = "message_type", nullable = false)
     private String messageType;
 
-    @Column(name = "source_service", nullable = false)
     private String sourceService;
 
-    @Lob
-    @Column(name = "payload", nullable = false)
     private String payload;
 
-    @Column(name = "status", nullable = false)
     private String status;
 
-    @Column(name = "processed_at")
     private LocalDateTime processedAt;
 
     public String getMessageId() { return messageId; }
