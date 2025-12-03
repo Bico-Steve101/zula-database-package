@@ -71,7 +71,7 @@
         <repository>
             <id>github</id>
             <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/Bico-Steve101/zula-database-package</url>
+            <url>https://maven.pkg.github.com/Zula-Z/zula-database-package</url>
         </repository>
     </distributionManagement>
 </project>
