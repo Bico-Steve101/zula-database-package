@@ -19,7 +19,7 @@ Required dependencies (pom.xml)
   - `org.jdbi:jdbi3-core`
   - `org.jdbi:jdbi3-sqlobject`
   - (Optional) `org.jdbi:jdbi3-postgres` or other dialect helpers if needed
-  - `org.flywaydb:flyway-core` (if Flyway migrations are used; version 11.0.0+ to support PostgreSQL 17)
+  - `org.flywaydb:flyway-core` and `org.flywaydb:flyway-database-postgresql` (if Flyway migrations are used; version 11.0.0+ to support PostgreSQL 17)
 
 Example pom dependency snippet
 
@@ -150,6 +150,11 @@ Add the following dependencies to a consuming project's `pom.xml` (adjust versio
 <dependency>
   <groupId>org.flywaydb</groupId>
   <artifactId>flyway-core</artifactId>
+  <version>11.0.0</version>
+</dependency>
+<dependency>
+  <groupId>org.flywaydb</groupId>
+  <artifactId>flyway-database-postgresql</artifactId>
   <version>11.0.0</version>
 </dependency>
 ```

@@ -7,7 +7,7 @@
 
     <groupId>com.zula</groupId>
     <artifactId>zula-database-library</artifactId>
-    <version>1.0.5</version>
+    <version>1.0.6</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -37,6 +37,11 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
+            <version>11.0.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
             <version>11.0.0</version>
         </dependency>
         <dependency>
